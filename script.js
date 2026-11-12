@@ -34,6 +34,22 @@ if ('IntersectionObserver' in window && !reducedMotion) {
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
+(function () {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  if (!localStorage.getItem('cookie-consent')) {
+    setTimeout(() => banner.classList.add('is-visible'), 600);
+  }
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.classList.remove('is-visible');
+  });
+  document.getElementById('cookie-reject').addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'necessary');
+    banner.classList.remove('is-visible');
+  });
+})();
+
 document.querySelector('#contact-form').addEventListener('submit', (event) => {
   event.preventDefault();
   const form = event.currentTarget;
