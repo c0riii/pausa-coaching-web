@@ -79,5 +79,15 @@
       </div>
     </div>
   </div>
+  <section class="chat-widget" aria-label="Asistente informativo">
+    <div class="chat-panel" id="chat-panel" role="dialog" aria-labelledby="chat-title" aria-hidden="true" inert>
+      <header class="chat-panel__header"><div><p class="chat-panel__eyebrow">A TU RITMO</p><h2 id="chat-title">Un espacio para tus dudas</h2></div><button class="chat-close" id="chat-close" type="button" aria-label="Cerrar asistente">×</button></header>
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions text"><p class="chat-bubble chat-bubble--bot">Hola, soy el asistente informativo de este espacio. Puedo contarte cómo es el acompañamiento y cómo dar el primer paso. ¿Qué te gustaría saber?</p></div>
+      <div class="chat-suggestions" id="chat-suggestions" aria-label="Preguntas frecuentes"><button type="button" data-question="acompanamiento">¿En qué consiste?</button><button type="button" data-question="empezar">¿Cómo empezamos?</button><button type="button" data-question="para-quien">¿Para quién es?</button><button type="button" data-question="precio">¿Cuánto cuesta?</button></div>
+      <form class="chat-form" id="chat-form"><label class="visually-hidden" for="chat-input">Escribe tu pregunta</label><input id="chat-input" name="question" maxlength="300" autocomplete="off" placeholder="Escribe una pregunta…" required><button type="submit" aria-label="Enviar pregunta">Enviar</button></form>
+      <p class="chat-disclaimer">Asistente automático con respuestas orientativas; no es un servicio de atención psicológica. <a href="#contacto">Contacta con Miriam</a> para hablar personalmente.</p>
+    </div>
+    <button class="chat-launcher" id="chat-launcher" type="button" aria-expanded="false" aria-controls="chat-panel"><span class="chat-launcher__icon" aria-hidden="true">✳</span><span class="chat-launcher__label">¿Tienes dudas?</span></button>
+  </section>
 </body>
 </html>
